@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey">#9da0a3</color>
+    <color name="green">#53E88B</color>
+    <color name="rewat">#F5EEE6</color>
+    <color name="cream">#FFF8E3</color>
+    <color name="peach">#F3D7CA</color>
+    <color name="pink">#E6A4B4</color>
+    <color name="divider_color">#CCCCCC</color>
+
+</resources>

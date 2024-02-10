@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText">
+    <item
+        android:id="@+id/dashboard"
+        android:icon="@drawable/dashboard"
+        android:title="Dashboard" />
+
+
+    <item
+        android:id="@+id/privacy"
+        android:icon="@drawable/privacyicon"
+        android:title="Privacy">
+
+    </item>
+
+    <item
+        android:id="@+id/Guidelines"
+        android:icon="@drawable/guideicon"
+        android:title="Guidelines">
+
+    </item>
+    <item
+        android:id="@+id/contact"
+        android:icon="@drawable/contacticon"
+        android:title="Contact us" />
+
+    <item
+        android:id="@+id/About_us"
+        android:icon="@drawable/abouticon"
+        android:title="About us" />
+</menu>
