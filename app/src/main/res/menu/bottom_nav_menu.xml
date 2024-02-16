@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/Profile"
+        android:icon="@drawable/profile"
+        android:title="Profile"/>
+
+    <item
+        android:id="@+id/Applications"
+        android:icon="@drawable/applications"
+        android:title="Applications"/>
+
+    <item
+        android:id="@+id/StudentDetails"
+        android:icon="@drawable/student_details"
+        android:title="Student_details"/>
+
+
+
+</menu>

@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_dashboardfragment_to_formFragment"
             app:destination="@id/formFragment" />
+        <action
+            android:id="@+id/action_dashboardfragment_to_formFragment2"
+            app:destination="@id/formFragment" />
     </fragment>
     <fragment
         android:id="@+id/formFragment"
@@ -20,12 +23,12 @@
         android:label="fragment_form"
         tools:layout="@layout/fragment_form" >
         <action
-            android:id="@+id/action_formFragment_to_form2_Fragment"
-            app:destination="@id/form2_Fragment" />
+            android:id="@+id/action_formFragment_to_secondform3"
+            app:destination="@id/secondform" />
     </fragment>
     <fragment
-        android:id="@+id/form2_Fragment"
-        android:name="com.example.myapplication.fragments.form2_Fragment"
-        android:label="fragment_form2_"
-        tools:layout="@layout/fragment_form2_" />
+        android:id="@+id/secondform"
+        android:name="com.example.myapplication.fragments.secondform"
+        android:label="fragment_secondform"
+        tools:layout="@layout/fragment_secondform" />
 </navigation>

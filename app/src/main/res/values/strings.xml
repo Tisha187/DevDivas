@@ -1,13 +1,12 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Nurture</string>
     <string name="title_activity_landing_page">LandingPage</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
-    <string name="description">Welcome to our adoption app, connecting loving parents with children in need. Browse profiles, find your perfect match, and embark on the journey of a lifetime. With intuitive search features, expert guidance, and a supportive community,
-        we're here to make your adoption experience seamless and fulfilling. Start your journey today and make a difference in a child's life.</string>
+
 
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
@@ -47,4 +46,11 @@
     </string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="connecting_hearts_building_families">Connecting Hearts, Building Families</string>
+    <string name="acknowledgements">Acknowledgements</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="default_web_client_id">734337983809-g7jgts1fobgq07m5eg9l23qp2283hmtm.apps.googleusercontent.com</string>
 </resources>

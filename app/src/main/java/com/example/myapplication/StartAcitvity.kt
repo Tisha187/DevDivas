@@ -20,5 +20,9 @@ class StartAcitvity : AppCompatActivity() {
             val intent = Intent(this, Login_Activity::class.java)
             startActivity(intent)
         }
+        binding.childbtn.setOnClickListener {
+            val intent=Intent(this,NgoRegister::class.java)
+            startActivity(intent)
+        }
     }
 }
