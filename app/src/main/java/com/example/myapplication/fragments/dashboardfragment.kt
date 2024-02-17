@@ -28,9 +28,8 @@ class dashboardfragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val fragmentBinding = FragmentDashboardfragmentBinding.inflate(inflater, container, false)
-        binding = fragmentBinding
-        return fragmentBinding.root
+        binding = FragmentDashboardfragmentBinding.inflate(inflater, container, false)
+        return binding?.root
     }
 
 

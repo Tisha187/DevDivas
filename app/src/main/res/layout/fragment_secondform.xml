@@ -73,7 +73,7 @@
     </TextView>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/nextbtn"
+        android:id="@+id/Submitbtn"
         android:layout_width="152dp"
         android:layout_height="57dp"
         android:layout_marginBottom="16dp"
@@ -99,7 +99,7 @@
         tools:layout_editor_absoluteX="0dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/firstnameinput"
+            android:id="@+id/partnerNameinput"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
@@ -120,7 +120,7 @@
         tools:layout_editor_absoluteX="0dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/lastnameinput"
+            android:id="@+id/partnerDOBinput"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
@@ -142,7 +142,7 @@
         tools:layout_editor_absoluteX="0dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/genderinput"
+            android:id="@+id/addressinput"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
@@ -165,7 +165,7 @@
         tools:layout_editor_absoluteX="-16dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/emailinput"
+            android:id="@+id/occupationinput"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
@@ -214,19 +214,19 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout4">
 
         <RadioButton
-            android:id="@+id/radioButtonOption1"
+            android:id="@+id/singleOption"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Single" />
 
         <RadioButton
-            android:id="@+id/radioButtonOption2"
+            android:id="@+id/marriedOption"
             android:layout_width="99dp"
             android:layout_height="wrap_content"
             android:text="Married" />
 
         <RadioButton
-            android:id="@+id/radioButtonOption3"
+            android:id="@+id/divorcedOption"
             android:layout_width="115dp"
             android:layout_height="wrap_content"
             android:text="Divorced"
