@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graphngo"
+    app:startDestination="@id/childFragment">
+
+    <fragment
+        android:id="@+id/childFragment"
+        android:name="com.example.myapplication.ChildFragment"
+        android:label="fragment_child"
+        tools:layout="@layout/fragment_child" >
+        <action
+            android:id="@+id/action_childFragment_to_applicationFragment"
+            app:destination="@id/applicationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ngoProfile"
+        android:name="com.example.myapplication.NgoProfile"
+        android:label="fragment_ngo_profile"
+        tools:layout="@layout/fragment_ngo_profile" />
+    <fragment
+        android:id="@+id/applicationFragment"
+        android:name="com.example.myapplication.ApplicationFragment"
+        android:label="fragment_application"
+        tools:layout="@layout/fragment_application" >
+        <action
+            android:id="@+id/action_applicationFragment_to_ngoProfile"
+            app:destination="@id/ngoProfile" />
+    </fragment>
+</navigation>
