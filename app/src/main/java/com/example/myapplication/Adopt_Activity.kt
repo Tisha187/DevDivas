@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.ImageView
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
+import com.example.myapplication.fragments.dashboardfragment
 //import com.example.myapplication.fragments.about_us
 import com.google.android.material.navigation.NavigationView
 
@@ -28,24 +29,25 @@ class Adopt_Activity : AppCompatActivity() {
         }
 
 
-//    sideDrawerLayout.setNavigationItemSelectedListener {
-//        when (it.itemId) {
-//            R.id.dashboard -> {
-//                loadFragment(about_us())
-//                return@setNavigationItemSelectedListener true
-//            }
-//
-//            else -> false
-//        }
+        sideDrawerLayout.setNavigationItemSelectedListener {
+            when (it.itemId) {
+                R.id.dashboard -> {
+                    loadFragment(dashboardfragment())
+                    return@setNavigationItemSelectedListener true
+                }
 
+
+                else -> false
+            }
+        }
+    }
+
+private  fun loadFragment(fragment: Fragment){
+    val transaction = supportFragmentManager.beginTransaction()
+    transaction.replace(R.id.container,fragment)
+    transaction.addToBackStack(null)
+    transaction.commit()
 }
-
-//private  fun loadFragment(fragment: Fragment){
-//    val transaction = supportFragmentManager.beginTransaction()
-//    transaction.replace(R.id.container,fragment)
-//    transaction.addToBackStack(null)
-//    transaction.commit()
-//}
 
 
 

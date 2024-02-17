@@ -7,7 +7,20 @@
     android:background="@color/white"
     tools:context=".fragments.PreferencesFragment">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:text="Your Preferences ?"
+        android:textColor="@color/pink"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
+    </TextView>
 
     <ImageView
         android:id="@+id/femaleChildIcon"
@@ -73,7 +86,7 @@
 
     <TextView
         android:id="@+id/maleChild"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="45dp"
         android:layout_marginTop="12dp"
@@ -107,22 +120,37 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/fillTheForm"
-        android:layout_width="wrap_content"
+        android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:layout_marginBottom="72dp"
         android:background="@drawable/greenbuttongradient"
         android:padding="15dp"
-        android:text="Fill the Form"
+        android:text="Next"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mixChild"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.277" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Fill the Form"
+        android:textColor="@color/pink"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/fillTheForm"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="@+id/fillTheForm"
+        app:layout_constraintTop_toBottomOf="@+id/fillTheForm"
+        app:layout_constraintVertical_bias="0.057">
+
+    </TextView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
