@@ -65,7 +65,7 @@
         android:drawablePadding="15dp"
         android:elevation="5dp"
         android:ems="10"
-        android:hint="Organization's Name/Email"
+        android:hint="Email"
         android:inputType="textEmailAddress"
         android:paddingLeft="15dp"
         app:layout_constraintEnd_toEndOf="@+id/textView6"
@@ -74,7 +74,7 @@
 
 
     <EditText
-        android:id="@+id/Password"
+        android:id="@+id/publishedYear"
         android:layout_width="325dp"
         android:layout_height="57dp"
         android:layout_marginTop="20dp"
@@ -104,7 +104,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Password" />
+        app:layout_constraintTop_toBottomOf="@+id/publishedYear" />
 
     <TextView
         android:id="@+id/registerBtn"

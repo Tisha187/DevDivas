@@ -44,7 +44,7 @@
         app:layout_constraintTop_toBottomOf="@+id/appName" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/organizationName"
         android:layout_width="325dp"
         android:layout_height="57dp"
         android:layout_marginTop="12dp"
@@ -61,7 +61,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <EditText
-        android:id="@+id/editTextText1"
+        android:id="@+id/password"
         android:layout_width="325dp"
         android:layout_height="57dp"
         android:layout_marginTop="12dp"
@@ -71,11 +71,11 @@
         android:elevation="5dp"
         android:ems="10"
         android:hint="Password"
-        android:inputType="text"
+        android:inputType="textPassword"
         android:paddingLeft="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintTop_toBottomOf="@+id/organizationName" />
 
     <TextView
         android:id="@+id/textView6"
@@ -93,7 +93,7 @@
         android:id="@+id/emailinput"
         android:layout_width="325dp"
         android:layout_height="57dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="84dp"
         android:background="@drawable/edittextshape"
         android:drawableLeft="@drawable/mail"
         android:drawablePadding="15dp"
@@ -105,10 +105,10 @@
         app:layout_constraintEnd_toEndOf="@+id/textView6"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="@+id/textView6"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintTop_toBottomOf="@+id/organizationName" />
 
     <EditText
-        android:id="@+id/Password"
+        android:id="@+id/publishedYear"
         android:layout_width="325dp"
         android:layout_height="57dp"
         android:layout_marginTop="16dp"
@@ -118,7 +118,7 @@
         android:elevation="5dp"
         android:ems="10"
         android:hint="Published Year"
-        android:inputType="textPassword"
+        android:inputType="text"
         android:paddingLeft="15dp"
         app:layout_constraintEnd_toEndOf="@+id/emailinput"
         app:layout_constraintStart_toStartOf="@+id/emailinput"
@@ -136,15 +136,15 @@
         android:elevation="5dp"
         android:ems="10"
         android:hint="city"
-        android:inputType="textPassword"
+        android:inputType="text"
         android:paddingLeft="15dp"
         app:layout_constraintEnd_toEndOf="@+id/emailinput"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/emailinput"
-        app:layout_constraintTop_toBottomOf="@+id/Password" />
+        app:layout_constraintTop_toBottomOf="@+id/publishedYear" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/loginBtn"
+        android:id="@+id/registerBtn"
         android:layout_width="152dp"
         android:layout_height="57dp"
         android:layout_marginTop="12dp"
@@ -159,15 +159,15 @@
         app:layout_constraintTop_toBottomOf="@+id/City" />
 
     <TextView
-        android:id="@+id/registerBtn"
+        android:id="@+id/loginBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="15dp"
         android:text="Already Have an Account?"
         android:textColor="@color/black"
         android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@+id/loginBtn"
+        app:layout_constraintEnd_toEndOf="@+id/registerBtn"
         app:layout_constraintHorizontal_bias="0.454"
-        app:layout_constraintStart_toStartOf="@+id/loginBtn"
-        app:layout_constraintTop_toBottomOf="@+id/loginBtn" />
+        app:layout_constraintStart_toStartOf="@+id/registerBtn"
+        app:layout_constraintTop_toBottomOf="@+id/registerBtn" />
 </androidx.constraintlayout.widget.ConstraintLayout>

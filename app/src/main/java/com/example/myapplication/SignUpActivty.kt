@@ -34,7 +34,7 @@ private lateinit var db:DatabaseReference
         binding.createBtn.setOnClickListener {
             email=binding.editTextTextEmailAddress2.text.toString().trim()
             password=binding.editTextTextPassword2.text.toString().trim()
-            name=binding.editTextText.text.toString().trim()
+            name=binding.organizationName.text.toString().trim()
 
             if(email.isBlank() || password.isBlank() || name.isBlank()) {
                 Toast.makeText(this,"Fill all details", Toast.LENGTH_SHORT).show()
