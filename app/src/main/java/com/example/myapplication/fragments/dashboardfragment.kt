@@ -28,9 +28,8 @@ class dashboardfragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val fragmentBinding = FragmentDashboardfragmentBinding.inflate(inflater, container, false)
-        binding = fragmentBinding
-        return fragmentBinding.root
+        binding = FragmentDashboardfragmentBinding.inflate(inflater, container, false)
+        return binding?.root
     }
 
 
@@ -38,7 +37,7 @@ class dashboardfragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding?.apply {
-            formBtn.setOnClickListener {
+            formtext.setOnClickListener {
                 findNavController().navigate(R.id.action_dashboardfragment_to_formFragment)
 
             }
