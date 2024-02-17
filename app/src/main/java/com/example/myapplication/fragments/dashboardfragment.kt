@@ -17,7 +17,11 @@ import com.example.myapplication.databinding.FragmentFormBinding
 class dashboardfragment : Fragment() {
     private var binding: FragmentDashboardfragmentBinding? = null
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
 
+
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -34,7 +38,7 @@ class dashboardfragment : Fragment() {
 
         binding?.apply {
             formtext.setOnClickListener {
-                findNavController().navigate(R.id.action_dashboardfragment_to_preferencesFragment)
+                findNavController().navigate(R.id.action_dashboardfragment_to_formFragment)
 
             }
 

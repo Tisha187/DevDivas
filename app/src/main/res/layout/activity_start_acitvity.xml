@@ -13,10 +13,10 @@
         android:src="@drawable/parenticon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.404"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.352">
+        app:layout_constraintVertical_bias="0.357">
 
     </ImageView>
 
@@ -24,10 +24,11 @@
         android:id="@+id/adoptbtn"
         android:layout_width="150dp"
         android:layout_height="50dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="610dp"
+        android:layout_marginTop="568dp"
         android:background="@drawable/greenbuttongradient"
         android:text="Adopt"
+        app:layout_constraintEnd_toStartOf="@+id/childbtn"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
@@ -43,10 +44,10 @@
         android:text="NGO Login"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.774"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/adoptbtn"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.387"
+        app:layout_constraintVertical_bias="0.375"
         tools:ignore="MissingConstraints">
 
     </androidx.appcompat.widget.AppCompatButton>

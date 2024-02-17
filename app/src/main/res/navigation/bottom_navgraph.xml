@@ -33,7 +33,11 @@
         android:id="@+id/secondform"
         android:name="com.example.myapplication.fragments.secondform"
         android:label="fragment_secondform"
-        tools:layout="@layout/fragment_secondform" />
+        tools:layout="@layout/fragment_secondform" >
+        <action
+            android:id="@+id/action_secondform_to_uploadFragment"
+            app:destination="@id/uploadFragment" />
+    </fragment>
     <fragment
         android:id="@+id/preferencesFragment"
         android:name="com.example.myapplication.fragments.PreferencesFragment"
@@ -43,4 +47,8 @@
             android:id="@+id/action_preferencesFragment_to_formFragment"
             app:destination="@id/formFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/uploadFragment"
+        android:name="com.example.myapplication.fragments.uploadFragment"
+        android:label="uploadFragment" />
 </navigation>
