@@ -8,6 +8,7 @@
     tools:context=".fragments.PreferencesFragment">
 
 
+
     <ImageView
         android:id="@+id/femaleChildIcon"
         android:layout_width="150dp"
