@@ -8,41 +8,45 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/rewat"
     tools:context=".fragments.dashboardfragment">
 
+
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/welcomeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
-        android:text="Welcome ! User"
+        android:layout_marginTop="76dp"
+        android:padding="20sp"
+        android:text="Welcome, User ! \nTo Nurture "
         android:textColor="@color/pink"
         android:textSize="35dp"
-        android:textStyle="bold"
+        android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.103"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
     </TextView>
 
-
     <ViewFlipper
         android:id="@+id/viewFlipper"
         android:layout_width="wrap_content"
         android:layout_height="235dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:layout_marginBottom="350dp"
         android:autoStart="true"
+        android:background="@drawable/border"
+        android:elevation="10dp"
         android:flipInterval="2000"
         android:inAnimation="@android:anim/slide_in_left"
         android:outAnimation="@android:anim/slide_out_right"
+        android:padding="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeText"
         tools:ignore="MissingConstraints">
 
         <ImageView
@@ -73,13 +77,14 @@
     </ViewFlipper>
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/joinUs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="228dp"
         android:text="Join Us!"
         android:textColor="@color/pink"
-        android:textSize="20dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -87,32 +92,20 @@
 
     </TextView>
 
-    <TextView
-        android:id="@+id/textView20"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="In Our Mission"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9"
-        tools:ignore="MissingConstraints">
-
-    </TextView>
 
     <TextView
-        android:id="@+id/textView21"
-        android:layout_width="351dp"
-        android:layout_height="66dp"
-        android:layout_marginBottom="60dp"
-        android:paddingStart="10dp"
+        android:id="@+id/motto"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:paddingStart="5dp"
         android:text="@string/message"
-        app:layout_constraintBottom_toTopOf="@+id/formtext"
-        app:layout_constraintEnd_toEndOf="@+id/textView20"
-        app:layout_constraintStart_toStartOf="@+id/textView20"
-        app:layout_constraintTop_toBottomOf="@+id/textView20"
-        tools:ignore="MissingConstraints">
+        android:textAlignment="center"
+        android:textColor="@color/grey"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="440dp">
 
     </TextView>
 
@@ -120,17 +113,29 @@
         android:id="@+id/formtext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
         android:text="Wanna be a Parent?"
-        android:textColor="@color/pink"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textView21"
-        app:layout_constraintStart_toStartOf="@+id/textView21"
-        tools:ignore="MissingConstraints">
+        android:textColor="@color/pinkAccent"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="112dp"
+        tools:layout_editor_absoluteY="490dp">
 
     </TextView>
 
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/familyIcon"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:scaleType="centerInside"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/formtext"
+        android:src="@drawable/parentsremovebg"
+        app:layout_constraintBottom_toTopOf="@+id/joinUs"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

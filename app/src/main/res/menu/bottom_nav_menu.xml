@@ -14,7 +14,7 @@
     <item
         android:id="@+id/StudentDetails"
         android:icon="@drawable/student_details"
-        android:title="Student_details"/>
+        android:title="Child_details"/>
 
 
 
