@@ -7,7 +7,6 @@ data class formModel(
     val email:String?=null,
     val phone:String?=null,
     val partnerName: String? = null,
-    val partnerDob: String? = null,
     val address: String? = null,
     val occupation: String? = null,
     val isSingle: Boolean = false,

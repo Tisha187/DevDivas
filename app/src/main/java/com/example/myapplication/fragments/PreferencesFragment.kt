@@ -5,11 +5,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.myapplication.R
+import com.example.myapplication.databinding.FragmentDashboardfragmentBinding
+import com.example.myapplication.databinding.FragmentPreferencesBinding
 
 
 class PreferencesFragment : Fragment() {
-    // TODO: Rename and change types of parameters
+    private var binding: FragmentPreferencesBinding? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,7 +25,18 @@ class PreferencesFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_preferences, container, false)
+        binding = FragmentPreferencesBinding.inflate(inflater, container, false)
+        return binding?.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding?.apply {
+            fillTheForm.setOnClickListener{
+                findNavController().navigate(R.id.action_preferencesFragment_to_formFragment)
+
+            }
+        }
     }
 
 

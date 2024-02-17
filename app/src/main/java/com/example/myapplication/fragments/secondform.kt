@@ -17,7 +17,6 @@ import com.google.firebase.database.FirebaseDatabase
 class secondform : Fragment() {
     private var binding: FragmentSecondformBinding? = null
     private lateinit var PartnerName: String
-    private lateinit var PartnerDob: String
     private lateinit var Address: String
     private lateinit var Occupation: String
     private  var IsSingle: Boolean = false
@@ -60,14 +59,13 @@ class secondform : Fragment() {
 
     private fun updateData(formDataKey: String, firstName: String?, lastName: String?, gender: String?, email: String?, phone: String?) {
         PartnerName = binding?.partnerNameinput?.text.toString().trim()
-        PartnerDob = binding?.partnerDOBinput?.text.toString().trim()
         Address = binding?.addressinput?.text.toString().trim()
         Occupation = binding?.occupationinput?.text.toString().trim()
         IsSingle = binding?.singleOption?.isChecked == true
         IsMarried = binding?.marriedOption?.isChecked == true
         IsDivorced = binding?.divorcedOption?.isChecked == true
 
-        val formData = formModel(firstName, lastName, gender, email, phone, partnerName = PartnerName, partnerDob = PartnerDob, address = Address, occupation = Occupation, isSingle = IsSingle, isMarried = IsMarried, isDivorced = IsDivorced)
+        val formData = formModel(firstName, lastName, gender, email, phone, partnerName = PartnerName, address = Address, occupation = Occupation, isSingle = IsSingle, isMarried = IsMarried, isDivorced = IsDivorced)
         val databaseReference = FirebaseDatabase.getInstance().getReference("FormData")
         databaseReference.child(formDataKey).setValue(formData)
 
