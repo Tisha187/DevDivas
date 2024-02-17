@@ -25,7 +25,6 @@
         android:id="@+id/bottomnaviagationview"
         android:layout_width="match_parent"
         android:layout_height="75dp"
-        android:layout_marginBottom="4dp"
         app:itemBackground="@color/pink"
         app:itemIconTint="@color/white"
         app:itemTextColor="@color/white"
