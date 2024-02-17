@@ -46,6 +46,8 @@ class formFragment : Fragment() {
 
         sharedPrefs = requireActivity().getPreferences(Context.MODE_PRIVATE)
 
+
+
         binding?.apply {
             nextbtn.setOnClickListener {
                 saveData()

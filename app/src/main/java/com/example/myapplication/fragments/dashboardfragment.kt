@@ -37,7 +37,7 @@ class dashboardfragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding?.apply {
-            formBtn.setOnClickListener {
+            formtext.setOnClickListener {
                 findNavController().navigate(R.id.action_dashboardfragment_to_formFragment)
 
             }
