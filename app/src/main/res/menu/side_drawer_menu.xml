@@ -16,13 +16,13 @@
     </item>
 
     <item
-        android:id="@+id/Guidelines"
-        android:icon="@drawable/guideicon"
+        android:id="@+id/offlineMeet"
+        android:icon="@drawable/offlinemeet"
         android:title="Guidelines">
 
     </item>
     <item
-        android:id="@+id/contact"
+        android:id="@+id/contact_us"
         android:icon="@drawable/contacticon"
         android:title="Contact us" />
 
