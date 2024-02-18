@@ -7,10 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.widget.AppCompatButton
 import com.example.myapplication.R
+import com.example.myapplication.databinding.FragmentOfflineMeetBinding
+import com.example.myapplication.databinding.FragmentSecondformBinding
 
 class offlineMeetFragment : Fragment() {
+ private var binding:FragmentOfflineMeetBinding?=null
 
-    val meetButton : AppCompatButton = findViewById(R.id.appointment)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -21,7 +23,8 @@ class offlineMeetFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_offline_meet, container, false)
+        binding = FragmentOfflineMeetBinding.inflate(inflater, container, false)
+        return binding?.root
     }
 
 }
