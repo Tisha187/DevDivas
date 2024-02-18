@@ -1,14 +1,508 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ChildFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ChildFragment"
+
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="85dp">
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="child" />
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:layout_marginBottom="85dp">
 
-</FrameLayout>
+
+        <!-- CardView for Child Profile 1 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <!-- Child Profile Layout -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Child Profile Image -->
+                <ImageView
+                    android:id="@+id/childPhoto"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/malechild"
+                    tools:ignore="MissingConstraints" />
+
+                <!-- Child Profile Name -->
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textStyle="bold"
+                    android:text="Child Name"
+                    android:textColor="@color/pinkAccent"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="20dp"
+                    app:layout_constraintLeft_toRightOf="@id/childPhoto"
+                    tools:ignore="MissingConstraints" />
+
+                <!-- Child Profile Age -->
+                <TextView
+                    android:id="@+id/age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Age: 5 years"
+                    android:textColor="@color/grey"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toRightOf="@id/childPhoto"
+                    app:layout_constraintTop_toBottomOf="@id/name"
+                    app:layout_constraintLeft_toLeftOf="@+id/name"/>
+
+                <!-- Add more information about the child -->
+                <TextView
+                    android:id="@+id/gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Gender: Male"
+                    android:textColor="@color/grey"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toRightOf="@id/childPhoto"
+                    app:layout_constraintTop_toBottomOf="@id/age"
+                    app:layout_constraintLeft_toLeftOf="@+id/age"/>
+
+                <TextView
+                    android:id="@+id/Status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Status: Adopted"
+                    android:textColor="@color/grey"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toRightOf="@id/childPhoto"
+                    app:layout_constraintTop_toBottomOf="@id/gender"
+                    app:layout_constraintLeft_toLeftOf="@+id/gender"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Add more CardViews for other children profiles -->
+
+        <!-- CardView for Child Profile 1 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <!-- Child Profile Layout -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Child Profile Image -->
+                <ImageView
+                    android:id="@+id/childPhoto2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/malechild"
+                    tools:ignore="MissingConstraints" />
+
+                <!-- Child Profile Name -->
+                <TextView
+                    android:id="@+id/name2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textStyle="bold"
+                    android:text="Child Name"
+                    android:textColor="@color/pinkAccent"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="20dp"
+                    app:layout_constraintLeft_toRightOf="@id/childPhoto2"
+                    tools:ignore="MissingConstraints" />
+
+                <!-- Child Profile Age -->
+                <TextView
+                    android:id="@+id/age2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Age: 5 years"
+                    android:textColor="@color/grey"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toRightOf="@id/childPhoto2"
+                    app:layout_constraintTop_toBottomOf="@id/name2"
+                    app:layout_constraintLeft_toLeftOf="@+id/name2"/>
+
+                <!-- Add more information about the child -->
+                <TextView
+                    android:id="@+id/gender2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Gender: Male"
+                    android:textColor="@color/grey"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toRightOf="@id/childPhoto2"
+                    app:layout_constraintTop_toBottomOf="@id/age2"
+                    app:layout_constraintLeft_toLeftOf="@+id/age2"/>
+
+                <TextView
+                    android:id="@+id/Status2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Status: Adopted"
+                    android:textColor="@color/grey"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toRightOf="@id/childPhoto2"
+                    app:layout_constraintTop_toBottomOf="@id/gender2"
+                    app:layout_constraintLeft_toLeftOf="@+id/gender2"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- CardView for Child Profile 1 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <!-- Child Profile Layout -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Child Profile Image -->
+                <ImageView
+                    android:id="@+id/childPhoto3"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/malechild"
+                    tools:ignore="MissingConstraints" />
+
+                <!-- Child Profile Name -->
+                <TextView
+                    android:id="@+id/name3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textStyle="bold"
+                    android:text="Child Name"
+                    android:textColor="@color/pinkAccent"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="20dp"
+                    app:layout_constraintLeft_toRightOf="@id/childPhoto3"
+                    tools:ignore="MissingConstraints" />
+
+                <!-- Child Profile Age -->
+                <TextView
+                    android:id="@+id/age3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Age: 5 years"
+                    android:textColor="@color/grey"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toRightOf="@id/childPhoto3"
+                    app:layout_constraintTop_toBottomOf="@id/name3"
+                    app:layout_constraintLeft_toLeftOf="@+id/name3"/>
+
+                <!-- Add more information about the child -->
+                <TextView
+                    android:id="@+id/gender3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Gender: Male"
+                    android:textColor="@color/grey"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toRightOf="@id/childPhoto3"
+                    app:layout_constraintTop_toBottomOf="@id/age3"
+                    app:layout_constraintLeft_toLeftOf="@+id/age3"/>
+
+                <TextView
+                    android:id="@+id/Status3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Status: Adopted"
+                    android:textColor="@color/grey"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toRightOf="@id/childPhoto3"
+                    app:layout_constraintTop_toBottomOf="@id/gender3"
+                    app:layout_constraintLeft_toLeftOf="@+id/gender3"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- CardView for Child Profile 1 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <!-- Child Profile Layout -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Child Profile Image -->
+                <ImageView
+                    android:id="@+id/childPhoto4"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/malechild"
+                    tools:ignore="MissingConstraints" />
+
+                <!-- Child Profile Name -->
+                <TextView
+                    android:id="@+id/name4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textStyle="bold"
+                    android:text="Child Name"
+                    android:textColor="@color/pinkAccent"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="20dp"
+                    app:layout_constraintLeft_toRightOf="@id/childPhoto4"
+                    tools:ignore="MissingConstraints" />
+
+                <!-- Child Profile Age -->
+                <TextView
+                    android:id="@+id/age4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Age: 5 years"
+                    android:textColor="@color/grey"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toRightOf="@id/childPhoto4"
+                    app:layout_constraintTop_toBottomOf="@id/name4"
+                    app:layout_constraintLeft_toLeftOf="@+id/name4"/>
+
+                <!-- Add more information about the child -->
+                <TextView
+                    android:id="@+id/gender4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Gender: Male"
+                    android:textColor="@color/grey"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toRightOf="@id/childPhoto4"
+                    app:layout_constraintTop_toBottomOf="@id/age4"
+                    app:layout_constraintLeft_toLeftOf="@+id/age4"/>
+
+                <TextView
+                    android:id="@+id/Status4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Status: Adopted"
+                    android:textColor="@color/grey"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toRightOf="@id/childPhoto4"
+                    app:layout_constraintTop_toBottomOf="@id/gender4"
+                    app:layout_constraintLeft_toLeftOf="@+id/gender4"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- CardView for Child Profile 1 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <!-- Child Profile Layout -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Child Profile Image -->
+                <ImageView
+                    android:id="@+id/childPhoto5"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/malechild"
+                    tools:ignore="MissingConstraints" />
+
+                <!-- Child Profile Name -->
+                <TextView
+                    android:id="@+id/name5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textStyle="bold"
+                    android:text="Child Name"
+                    android:textColor="@color/pinkAccent"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="20dp"
+                    app:layout_constraintLeft_toRightOf="@id/childPhoto5"
+                    tools:ignore="MissingConstraints" />
+
+                <!-- Child Profile Age -->
+                <TextView
+                    android:id="@+id/age5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Age: 5 years"
+                    android:textColor="@color/grey"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toRightOf="@id/childPhoto5"
+                    app:layout_constraintTop_toBottomOf="@id/name5"
+                    app:layout_constraintLeft_toLeftOf="@+id/name5"/>
+
+                <!-- Add more information about the child -->
+                <TextView
+                    android:id="@+id/gender5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Gender: Male"
+                    android:textColor="@color/grey"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toRightOf="@id/childPhoto5"
+                    app:layout_constraintTop_toBottomOf="@id/age5"
+                    app:layout_constraintLeft_toLeftOf="@+id/age5"/>
+
+                <TextView
+                    android:id="@+id/Status5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Status: Adopted"
+                    android:textColor="@color/grey"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toRightOf="@id/childPhoto5"
+                    app:layout_constraintTop_toBottomOf="@id/gender5"
+                    app:layout_constraintLeft_toLeftOf="@+id/gender5"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- CardView for Child Profile 1 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <!-- Child Profile Layout -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Child Profile Image -->
+                <ImageView
+                    android:id="@+id/childPhoto6"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/malechild"
+                    tools:ignore="MissingConstraints" />
+
+                <!-- Child Profile Name -->
+                <TextView
+                    android:id="@+id/name6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textStyle="bold"
+                    android:text="Child Name"
+                    android:textColor="@color/pinkAccent"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="20dp"
+                    app:layout_constraintLeft_toRightOf="@id/childPhoto6"
+                    tools:ignore="MissingConstraints" />
+
+                <!-- Child Profile Age -->
+                <TextView
+                    android:id="@+id/age6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Age: 5 years"
+                    android:textColor="@color/grey"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toRightOf="@id/childPhoto6"
+                    app:layout_constraintTop_toBottomOf="@id/name6"
+                    app:layout_constraintLeft_toLeftOf="@+id/name6"/>
+
+                <!-- Add more information about the child -->
+                <TextView
+                    android:id="@+id/gender6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Gender: Male"
+                    android:textColor="@color/grey"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toRightOf="@id/childPhoto6"
+                    app:layout_constraintTop_toBottomOf="@id/age6"
+                    app:layout_constraintLeft_toLeftOf="@+id/age6"/>
+
+                <TextView
+                    android:id="@+id/Status6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Status: Adopted"
+                    android:textColor="@color/grey"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toRightOf="@id/childPhoto6"
+                    app:layout_constraintTop_toBottomOf="@id/gender6"
+                    app:layout_constraintLeft_toLeftOf="@+id/gender6"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>

@@ -55,4 +55,8 @@
     <string name="title_notifications">Notifications</string>
     <string name="default_web_client_id">734337983809-g7jgts1fobgq07m5eg9l23qp2283hmtm.apps.googleusercontent.com</string>
     <string name="mix">GENDER NEUTRAL</string>
+    <string name="askparent">Wanna be a Parent?</string>
+    <string name="join_us">Join Us!</string>
+    <string name="welcome_user_nto_nurture">Welcome, User ! \nTo Nurture</string>
+    <string name="name_of_the_ngo">Name of the NGO</string>
 </resources>

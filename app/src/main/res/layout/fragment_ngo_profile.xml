@@ -1,14 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".NgoProfile">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="profile ngo" />
+    <ImageView
+        android:id="@+id/ngoPhoto"
+        android:layout_width="175dp"
+        android:layout_height="175dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ngologo"
+        android:layout_marginTop="60dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/orgName"
+        />
 
-</FrameLayout>
+
+    <TextView
+        android:id="@+id/orgName"
+        android:textColor="@color/pinkAccent"
+        android:textSize="20sp"
+        android:text="@string/name_of_the_ngo"
+        android:padding="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/email"
+        app:layout_constraintTop_toBottomOf="@+id/ngoPhoto" />
+
+    <TextView
+        android:id="@+id/email"
+        android:textColor="@color/pinkAccent"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:text="Email"
+        android:padding="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/publishedYear"
+        app:layout_constraintTop_toBottomOf="@+id/orgName"
+        app:layout_constraintLeft_toLeftOf="@+id/orgName"/>
+
+    <TextView
+        android:id="@+id/publishedYear"
+        android:textColor="@color/pinkAccent"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:text="Year of Establishment"
+        android:padding="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/location"
+        app:layout_constraintTop_toBottomOf="@+id/email"
+        app:layout_constraintLeft_toLeftOf="@+id/email"/>
+
+    <TextView
+        android:id="@+id/location"
+        android:textColor="@color/pinkAccent"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:text="Location"
+        android:padding="4dp"
+        app:layout_constraintTop_toBottomOf="@id/publishedYear"
+        app:layout_constraintLeft_toLeftOf="@+id/publishedYear"/>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="205dp" />
+
+    <TextView
+        android:id="@+id/orphankids"
+        android:textColor="@color/pinkAccent"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:text="74 Orphan Kids"
+        android:padding="4dp"
+        app:layout_constraintLeft_toLeftOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/location"
+        app:layout_constraintRight_toRightOf="@+id/location"
+        />
+
+    <TextView
+        android:id="@+id/adoptedkids"
+        android:textColor="@color/pinkAccent"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:text="14 Adopted kids"
+        android:padding="4dp"
+        app:layout_constraintRight_toRightOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/location"
+        app:layout_constraintLeft_toLeftOf="@+id/location" />
+
+    <TextView
+        android:id="@+id/awards"
+        android:textColor="@color/pinkAccent"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:text="Awards"
+        android:padding="4dp"
+        app:layout_constraintTop_toBottomOf="@id/adoptedkids" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="125dp"
+        android:layout_height="55dp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/awards"
+        app:layout_constraintLeft_toRightOf="@id/guideline"
+        android:layout_marginTop="45sp"
+        android:background="@drawable/greenbuttongradient"
+        android:layout_marginLeft="40dp"
+        android:text="Edit Profile"
+        android:textSize="16sp"
+        android:padding="10dp"
+
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
