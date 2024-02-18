@@ -1,21 +1,17 @@
 package com.example.myapplication.fragments
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
-import com.example.myapplication.ChildProfile
-import com.example.myapplication.Login_Activity
+import android.widget.Toast
 import com.example.myapplication.R
-import com.example.myapplication.databinding.FragmentDashboardfragmentBinding
-import com.example.myapplication.databinding.FragmentPreferencesBinding
+import com.example.myapplication.databinding.FragmentCalendarBinding
 
 
-class PreferencesFragment : Fragment() {
-    private var binding: FragmentPreferencesBinding? = null
+class CalendarFragment : Fragment() {
+ private var binding:FragmentCalendarBinding?=null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,16 +24,17 @@ class PreferencesFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = FragmentPreferencesBinding.inflate(inflater, container, false)
-        return binding?.root
+        binding=FragmentCalendarBinding.inflate(inflater,container,false)
+        return binding!!.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding?.apply {
-            val intent = Intent(requireContext(), ChildProfile::class.java)
-            startActivity(intent)
+            Schedule.setOnClickListener {
+                Toast.makeText(context, "Your Appointment has been Scheduled", Toast.LENGTH_SHORT).show()
 
+            }
         }
     }
 
