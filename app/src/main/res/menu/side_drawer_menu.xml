@@ -9,8 +9,8 @@
 
 
     <item
-        android:id="@+id/privacy"
-        android:icon="@drawable/privacyicon"
+        android:id="@+id/meetingLink"
+        android:icon="@drawable/meet"
         android:title="Privacy">
 
     </item>
