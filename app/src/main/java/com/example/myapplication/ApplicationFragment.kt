@@ -1,32 +1,25 @@
 package com.example.myapplication
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.myapplication.databinding.FragmentApplicationBinding
+import com.example.myapplication.model.User
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [ApplicationFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class ApplicationFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
+    private var binding: FragmentApplicationBinding? = null
+    private lateinit var database: DatabaseReference
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+        database = FirebaseDatabase.getInstance().reference
     }
 
     override fun onCreateView(
@@ -34,26 +27,40 @@ class ApplicationFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_application, container, false)
+        binding = FragmentApplicationBinding.inflate(inflater, container, false)
+        return binding?.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ApplicationFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            ApplicationFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+    }
+
+    private fun fetchData() {
+        // Assuming "yourReference" points to the specific node in your database
+        database.child("User").addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                if (dataSnapshot.exists()) {
+                    val person = dataSnapshot.getValue(User::class.java)
+
+                    // Now 'person' contains your data
+                    updateUI(person)
                 }
             }
+
+            override fun onCancelled(databaseError: DatabaseError) {
+                Log.e("YourFragment", "Error getting data", databaseError.toException())
+            }
+        })
+    }
+
+    private fun updateUI(person: User?) {
+        // Update your UI with the retrieved data
+        if (person != null) {
+            // Update UI components with person.parentName and person.spouseName
+        } else {
+            // Handle the case where data is not available
+        }
+
     }
 }
