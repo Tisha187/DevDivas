@@ -50,5 +50,13 @@
     <fragment
         android:id="@+id/uploadFragment"
         android:name="com.example.myapplication.fragments.uploadFragment"
-        android:label="uploadFragment" />
+        android:label="uploadFragment" >
+        <action
+            android:id="@+id/action_uploadFragment_to_documentFragment"
+            app:destination="@id/documentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/documentFragment"
+        android:name="com.example.myapplication.fragments.documentFragment"
+        android:label="documentFragment" />
 </navigation>
