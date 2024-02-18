@@ -33,7 +33,7 @@ class PreferencesFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding?.apply {
             fillTheForm.setOnClickListener{
-                findNavController().navigate(R.id.action_preferencesFragment_to_formFragment)
+
 
             }
         }
