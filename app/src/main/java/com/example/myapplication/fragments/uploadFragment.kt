@@ -7,8 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.myapplication.R
-import com.example.myapplication.databinding.FragmentDashboardfragmentBinding
-import com.example.myapplication.databinding.FragmentFormBinding
 import com.example.myapplication.databinding.FragmentUploadBinding
 
 
@@ -32,10 +30,9 @@ class uploadFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding?.apply {
-            uploadbtn.setOnClickListener {
+            uploadBtn.setOnClickListener {
                 findNavController().navigate(R.id.action_uploadFragment_to_documentFragment)
             }
-
         }
     }
 

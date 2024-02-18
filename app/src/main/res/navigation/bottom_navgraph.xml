@@ -16,9 +16,7 @@
         <action
             android:id="@+id/action_dashboardfragment_to_formFragment2"
             app:destination="@id/formFragment" />
-        <action
-            android:id="@+id/action_dashboardfragment_to_preferencesFragment"
-            app:destination="@id/preferencesFragment" />
+
     </fragment>
     <fragment
         android:id="@+id/formFragment"
@@ -43,20 +41,23 @@
         android:name="com.example.myapplication.fragments.PreferencesFragment"
         android:label="fragment_preferences"
         tools:layout="@layout/fragment_preferences" >
-        <action
-            android:id="@+id/action_preferencesFragment_to_formFragment"
-            app:destination="@id/formFragment" />
     </fragment>
     <fragment
         android:id="@+id/uploadFragment"
         android:name="com.example.myapplication.fragments.uploadFragment"
         android:label="uploadFragment" >
+
         <action
             android:id="@+id/action_uploadFragment_to_documentFragment"
             app:destination="@id/documentFragment" />
     </fragment>
     <fragment
         android:id="@+id/documentFragment"
-        android:name="com.example.myapplication.fragments.documentFragment"
-        android:label="documentFragment" />
+        android:name="com.example.myapplication.fragments.DocumentFragment"
+        android:label="DocumentFragment" >
+        <action
+            android:id="@+id/action_documentFragment_to_preferencesFragment"
+            app:destination="@id/preferencesFragment" />
+    </fragment>
+
 </navigation>
