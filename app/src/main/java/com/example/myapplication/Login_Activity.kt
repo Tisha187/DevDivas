@@ -74,6 +74,7 @@ class Login_Activity : AppCompatActivity() {
                     val user=auth.currentUser
                     Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show()
                     startActivity(Intent(this, Adopt_Activity::class.java))
+                    finish()
                 }
                 else{
                     Toast.makeText(this, "please sign up first", Toast.LENGTH_SHORT).show()
@@ -83,10 +84,17 @@ class Login_Activity : AppCompatActivity() {
 
     }
 
+    override fun onStart() {
+        super.onStart()
+        val currentUser = auth.currentUser
+        if (currentUser != null) {
+            updateUI(currentUser)
+        }
+    }
+
 
 
     private fun updateUI(currentuser: FirebaseUser?) {
-
         startActivity(Intent(this,Adopt_Activity::class.java))
         finish()
 
